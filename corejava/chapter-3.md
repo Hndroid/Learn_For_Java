@@ -1,5 +1,3 @@
-
-
 Java核心卷  第三章
 
 1. 访问修饰符用于控制程序的其他部分对该段代码的访问级别;
@@ -64,7 +62,33 @@ Java核心卷  第三章
 
 15. 使用equals\(\)方法检测两个字符串是否相等;比较的可以使字符串变量，也可以是字符串字面量;一定不要使用==运算符检测两个字符串是否相等，实际上，只有字符串常量是共享的;
 
+    1. ```java
+       public class TestCharpt {
+       	public static void main(String[] args) {
+       		String string = "Hello";
+       		String string2 = "Hello";
+       		StringBuffer stringBuffer = new StringBuffer();
+       		stringBuffer.append(string);
+       		if (string == "Hello") {
+       			System.out.println("true");
+       			//表示两个字符串放在同一个地方
+       		}
+       		if (string == string2) {
+       			System.out.println("true2");
+       		}
+       		if (string.equals(string2)) {
+       			System.out.println("true2");
+       			System.out.println(string.hashCode());
+       			System.out.println(string2.hashCode());
+       		}
+		
+       	}
+       }
+       ```
+
 16. 空串" "是长度为0的字符串，空串是一个Java对象，有自己串长度（长度为0）和内容（内容为空）;String变量还可以存放一个特殊的值，名为null，这表示目前没有任何对象与该变量关联;
+
 17. Java字符串由char值序列组成; char数据类型是一个采用UTF-16编码表示Unicode码点的代码单元 
+18. 
 
 
